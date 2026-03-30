@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KoLoKids - El Maquinista | Escuela de Lectura Sensorial</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap');
+        body { font-family: 'Fredoka', sans-serif; }
+        .train-gradient { background: linear-gradient(135deg, #1E3A8A 0%, #2563EB 100%); }
+        .hero-image-container {
+            filter: drop-shadow(0 20px 30px rgba(0,0,0,0.3));
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- NAVBAR -->
+    <nav class="bg-white border-b border-slate-100 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="bg-blue-600 p-2 rounded-lg text-white">
+                    <i data-lucide="train-front"></i>
+                </div>
+                <span class="text-2xl font-bold text-blue-900 tracking-tight">KoLoKids</span>
+            </div>
+            <div class="hidden md:flex gap-8 font-semibold text-slate-500">
+                <a href="#metodo" class="hover:text-blue-600 transition">Método</a>
+                <a href="#app" class="hover:text-blue-600 transition">La App</a>
+                <a href="#privacidad" class="hover:text-blue-600 transition">Privacidad</a>
+            </div>
+            <a href="#descarga" class="bg-blue-600 text-white px-6 py-2 rounded-full font-bold shadow-lg hover:bg-blue-700 transition">¡Descargar Ahora!</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header id="app" class="train-gradient text-white py-12 md:py-24 px-6 relative overflow-hidden">
+        <!-- Decoración de fondo -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -mr-48 -mt-48"></div>
+        
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
+            <div class="text-center md:text-left">
+                <div class="inline-block bg-yellow-400 text-blue-900 px-4 py-1 rounded-full text-sm font-bold mb-4 uppercase tracking-wider">
+                    🎉 ¡Ya disponible en móviles!
+                </div>
+                <h1 class="text-5xl md:text-6xl font-black mb-6 leading-tight">Aprender a leer es un viaje emocionante.</h1>
+                <p class="text-xl text-blue-100 mb-10 max-w-lg">El Maquinista utiliza un método sensorial diseñado para niños con TEA y dificultades de aprendizaje. ¡Súbete al tren del conocimiento!</p>
+                
+                <!-- BOTONES TIENDA -->
+                <div id="descarga" class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <!-- Google Play Mock -->
+                    <div class="bg-slate-900 text-white px-6 py-3 rounded-2xl flex items-center gap-3 border border-white/10 hover:bg-black transition-colors cursor-pointer shadow-xl">
+                        <i data-lucide="play" class="fill-white" size="24"></i>
+                        <div class="text-left">
+                            <p class="text-[10px] uppercase font-bold text-slate-400 leading-none">Descargar en</p>
+                            <p class="text-lg font-bold leading-none mt-1">Google Play</p>
+                        </div>
+                    </div>
+                    <!-- App Store Mock -->
+                    <div class="bg-slate-900 text-white px-6 py-3 rounded-2xl flex items-center gap-3 border border-white/10 hover:bg-black transition-colors cursor-pointer shadow-xl">
+                        <i data-lucide="apple" size="24"></i>
+                        <div class="text-left">
+                            <p class="text-[10px] uppercase font-bold text-slate-400 leading-none">Consíguelo en el</p>
+                            <p class="text-lg font-bold leading-none mt-1">App Store</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- IMAGEN DEL TREN MAGLEV -->
+            <div class="flex justify-center hero-image-container">
+                <div class="relative group">
+                    <!-- Resplandor -->
+                    <div class="absolute inset-0 bg-blue-400 rounded-full blur-3xl opacity-20 group-hover:opacity-40 transition-opacity"></div>
+                    <!-- Imagen del Tren 5 -->
+                    <img src="train_5.jpg" 
+                         alt="Maestro Maglev" 
+                         class="w-80 md:w-[450px] relative z-10 animate-bounce-slight" 
+                         style="animation-duration: 4s;"
+                         onerror="this.src='logo_tren.png'">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- STATS / PROGRESO -->
+    <div class="bg-white py-12 border-b border-slate-100">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center font-bold">
+            <div>
+                <p class="text-4xl text-blue-600">100</p>
+                <p class="text-slate-400 text-sm uppercase">Días de Viaje</p>
+            </div>
+            <div>
+                <p class="text-4xl text-blue-600">5</p>
+                <p class="text-slate-400 text-sm uppercase">Niveles de Tren</p>
+            </div>
+            <div>
+                <p class="text-4xl text-blue-600">0</p>
+                <p class="text-slate-400 text-sm uppercase">Publicidad</p>
+            </div>
+            <div>
+                <p class="text-4xl text-blue-600">100%</p>
+                <p class="text-slate-400 text-sm uppercase">Seguro</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- METODO SECTION -->
+    <section id="metodo" class="py-24 px-6 bg-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-black text-slate-900 mb-16 uppercase tracking-widest">Los 3 pilares del Maquinista</h2>
+            <div class="grid md:grid-cols-3 gap-16">
+                <div class="flex flex-col items-center">
+                    <div class="w-20 h-20 bg-red-100 text-red-600 rounded-3xl flex items-center justify-center mb-6 shadow-sm">
+                        <i data-lucide="hand" size="32"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3 text-slate-800">Tacto (Lija)</h3>
+                    <p class="text-slate-500 leading-relaxed">Sentir la forma de las letras antes de leerlas graba el aprendizaje en la memoria táctil para siempre.</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-20 h-20 bg-blue-100 text-blue-600 rounded-3xl flex items-center justify-center mb-6 shadow-sm">
+                        <i data-lucide="zap" size="32"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3 text-slate-800">El Choque</h3>
+                    <p class="text-slate-500 leading-relaxed">Las locomotoras rojas chocan con los vagones azules para unir sonidos de forma fluida y sin cortes.</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-20 h-20 bg-green-100 text-green-600 rounded-3xl flex items-center justify-center mb-6 shadow-sm">
+                        <i data-lucide="eraser" size="32"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3 text-slate-800">La Sal</h3>
+                    <p class="text-slate-500 leading-relaxed">Un espacio de juego seguro donde borrar errores al instante quita el miedo al fallo y fomenta el intento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRIVACY POLICY -->
+    <section id="privacidad" class="py-24 px-6 bg-slate-100">
+        <div class="max-w-3xl mx-auto bg-white p-12 rounded-[50px] shadow-xl border border-slate-200">
+            <h2 class="text-2xl font-black text-slate-800 mb-8 flex items-center gap-3">
+                <i data-lucide="shield-check" class="text-green-600" size="28"></i> Política de Privacidad
+            </h2>
+            <div class="text-slate-600 space-y-5 text-sm leading-relaxed">
+                <p>En <strong>KoLoKids</strong>, la privacidad de tus hijos es nuestra prioridad absoluta. Esta Política describe cómo nuestra aplicación "El Maquinista" trata la información.</p>
+                
+                <h4 class="font-bold text-slate-800 uppercase text-xs tracking-wider">1. Recopilación de datos</h4>
+                <p>La aplicación "El Maquinista" <strong>NO recopila ningún dato personal</strong> del usuario. No solicitamos nombres, correos electrónicos ni información de contacto.</p>
+                
+                <h4 class="font-bold text-slate-800 uppercase text-xs tracking-wider">2. Almacenamiento Local</h4>
+                <p>El progreso del niño (día actual y racha) se guarda exclusivamente de forma local en el dispositivo. KoLoKids no tiene acceso a esta información ni la comparte con terceros.</p>
+                
+                <h4 class="font-bold text-slate-800 uppercase text-xs tracking-wider">3. Publicidad y Compras</h4>
+                <p>Nuestra aplicación no contiene anuncios de terceros ni compras integradas para garantizar un entorno seguro y libre de distracciones para niños con TEA.</p>
+                
+                <h4 class="font-bold text-slate-800 uppercase text-xs tracking-wider">4. Contacto</h4>
+                <p>Para cualquier duda sobre esta política, puedes contactarnos en: <strong class="text-blue-600">hola@kolokids.org</strong></p>
+                
+                <p class="pt-6 border-t border-slate-100 text-slate-400 italic">Última actualización: Marzo 2026</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-16 px-6 text-center text-slate-400 text-sm">
+        <p>© 2026 KoLoKids.org - Hecho con ❤️ para pequeños maquinistas de todo el mundo.</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <style>
+        @keyframes bounce-slight {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        .animate-bounce-slight {
+            animation: bounce-slight infinite ease-in-out;
+        }
+    </style>
+</body>
+</html>
