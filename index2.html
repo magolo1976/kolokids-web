@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KoLoKids - El Maquinista | Lectura Sensorial para Todos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap');
+        body { 
+            font-family: 'Fredoka', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .gradient-blue { background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 50%, #60A5FA 100%); }
+        .gradient-text { background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-hover { transition: transform 0.3s, box-shadow 0.3s; }
+        .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+        .fade-in { animation: fadeIn 1s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="bg-white text-slate-800">
+
+    <!-- NAVBAR STICKY -->
+    <nav class="bg-white/95 backdrop-blur-sm border-b border-slate-100 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="bg-gradient-to-br from-blue-600 to-blue-800 p-2.5 rounded-2xl text-white shadow-lg">
+                    <i data-lucide="train-front" size="28"></i>
+                </div>
+                <span class="text-3xl font-bold gradient-text tracking-tight">KoLoKids</span>
+            </div>
+            <div class="hidden md:flex gap-10 font-semibold text-slate-600">
+                <a href="#contenido" class="hover:text-blue-600 transition">Contenido</a>
+                <a href="#metodo" class="hover:text-blue-600 transition">Método</a>
+                <a href="#testimonios" class="hover:text-blue-600 transition">Familias</a>
+                <a href="#premios" class="hover:text-blue-600 transition">Premios</a>
+            </div>
+            <a href="#descargar" class="gradient-blue text-white px-8 py-3 rounded-full font-bold shadow-lg hover:shadow-xl transition-all hover:scale-105">
+                Descargar Gratis
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="gradient-blue text-white py-20 md:py-32 px-6 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-white/5 rounded-full -mr-64 -mt-32"></div>
+        <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-white/5 rounded-full -ml-32 -mb-32"></div>
+        
+        <div class="max-w-7xl mx-auto text-center relative z-10">
+            <div class="inline-flex items-center gap-2 bg-yellow-400 text-blue-900 px-5 py-2 rounded-full text-sm font-bold mb-8 shadow-xl">
+                <span>⭐ 4.9</span>
+                <span class="text-yellow-700">|</span>
+                <span>+ 10,000 familias</span>
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight max-w-4xl mx-auto">
+                Enseña a leer a tu hijo mientras creáis lazos únicos
+            </h1>
+            
+            <p class="text-xl md:text-2xl text-blue-100 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
+                Una herramienta para padres que quieren enseñar a leer a sus hijos con dificultades de aprendizaje. Tú guías, tú acompañas, tú conectas.
+            </p>
+            
+            <a href="#descargar" class="inline-block bg-white text-blue-600 px-10 py-5 rounded-full text-xl font-bold shadow-2xl hover:scale-105 transition-transform">
+                Pruébalo GRATIS
+            </a>
+        </div>
+    </section>
+
+    <!-- STATS BAR -->
+    <div class="bg-slate-50 border-y border-slate-200 py-12">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div class="fade-in">
+                <p class="text-5xl font-black text-blue-600 mb-2">15'</p>
+                <p class="text-slate-500 font-semibold uppercase text-sm tracking-wider">Juntos al Día</p>
+            </div>
+            <div class="fade-in" style="animation-delay: 0.1s">
+                <p class="text-5xl font-black text-blue-600 mb-2">100</p>
+                <p class="text-slate-500 font-semibold uppercase text-sm tracking-wider">Días Acompañados</p>
+            </div>
+            <div class="fade-in" style="animation-delay: 0.2s">
+                <p class="text-5xl font-black text-blue-600 mb-2">0</p>
+                <p class="text-slate-500 font-semibold uppercase text-sm tracking-wider">Juego Autónomo</p>
+            </div>
+            <div class="fade-in" style="animation-delay: 0.3s">
+                <p class="text-5xl font-black text-blue-600 mb-2">100%</p>
+                <p class="text-slate-500 font-semibold uppercase text-sm tracking-wider">Tiempo Juntos</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECCIÓN: MILES DE CONTENIDOS -->
+    <section id="contenido" class="py-24 px-6 bg-white">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-5xl md:text-6xl font-black mb-6 gradient-text">
+                Recursos para enseñar paso a paso.
+            </h2>
+            <p class="text-xl text-slate-500 mb-16 max-w-2xl mx-auto">
+                100 días de lecciones guiadas para que puedas enseñar a tu hijo con total confianza. 5 niveles progresivos diseñados para acompañarte en cada etapa del aprendizaje.
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-12 mt-20">
+                <!-- CARD 1: Guía -->
+                <div class="card-hover bg-gradient-to-br from-red-50 to-red-100 p-10 rounded-[40px] shadow-lg">
+                    <div class="bg-red-500 w-24 h-24 rounded-3xl flex items-center justify-center mx-auto mb-8 shadow-xl">
+                        <i data-lucide="hand-heart" size="48" class="text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4 text-red-900">Tú Guías</h3>
+                    <p class="text-red-700 leading-relaxed">
+                        Instrucciones claras en cada lección para que sepas exactamente qué hacer. Guía las manos de tu hijo mientras trazan letras en lija, chocan trenes y escriben en sal.
+                    </p>
+                </div>
+
+                <!-- CARD 2: Conecta -->
+                <div class="card-hover bg-gradient-to-br from-blue-50 to-blue-100 p-10 rounded-[40px] shadow-lg">
+                    <div class="bg-blue-500 w-24 h-24 rounded-3xl flex items-center justify-center mx-auto mb-8 shadow-xl">
+                        <i data-lucide="heart-handshake" size="48" class="text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4 text-blue-900">Tú Conectas</h3>
+                    <p class="text-blue-700 leading-relaxed">
+                        15 minutos diarios de atención plena con tu hijo. Crean lazos afectivos mientras aprenden juntos. No es tiempo de pantalla, es tiempo de calidad.
+                    </p>
+                </div>
+
+                <!-- CARD 3: Enseña -->
+                <div class="card-hover bg-gradient-to-br from-green-50 to-green-100 p-10 rounded-[40px] shadow-lg">
+                    <div class="bg-green-500 w-24 h-24 rounded-3xl flex items-center justify-center mx-auto mb-8 shadow-xl">
+                        <i data-lucide="users" size="48" class="text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4 text-green-900">Tú Enseñas</h3>
+                    <p class="text-green-700 leading-relaxed">
+                        No necesitas ser profesor. El método sensorial es tan intuitivo que cualquier padre puede aplicarlo. Tú eres el mejor maestro de tu hijo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: CUANDO QUIERAS -->
+    <section class="py-24 px-6 bg-gradient-to-br from-slate-50 to-blue-50">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-5xl md:text-6xl font-black mb-6 gradient-text">
+                En el momento que tú elijas.
+            </h2>
+            <p class="text-xl text-slate-600 max-w-3xl mx-auto mb-16">
+                Sesiones de 15 minutos que se adaptan a tu rutina familiar. Por la mañana, después del cole, o antes de dormir. Tú decides cuándo es el mejor momento para conectar.
+            </p>
+            
+            <div class="bg-white p-12 rounded-[50px] shadow-2xl">
+                <!-- TIP: Aquí irían imágenes de la app en diferentes dispositivos -->
+                <div class="h-[400px] bg-gradient-to-br from-blue-100 to-blue-200 rounded-3xl flex items-center justify-center">
+                    <p class="text-blue-600 text-xl font-semibold">[IMAGEN: Mockups de app en tablet y móvil]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: HECHO PARA "5 MINUTOS MÁS" -->
+    <section class="py-24 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-5xl font-black mb-8 gradient-text leading-tight">
+                        Diseñado para<br/>familias reales
+                    </h2>
+                    <p class="text-xl text-slate-600 leading-relaxed mb-8">
+                        Entendemos que eres padre, no profesor. Por eso cada lección está pensada para que no necesites preparación previa. Abres la app y ya sabes qué hacer.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4">
+                            <div class="bg-green-100 p-2 rounded-full mt-1">
+                                <i data-lucide="check" class="text-green-600" size="20"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-slate-800">Instrucciones paso a paso</p>
+                                <p class="text-slate-500">Sabes exactamente qué decir y hacer en cada momento</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="bg-green-100 p-2 rounded-full mt-1">
+                                <i data-lucide="check" class="text-green-600" size="20"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-slate-800">Tú controlas el ritmo</p>
+                                <p class="text-slate-500">Avanzas cuando tu hijo está listo, sin presiones</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="bg-green-100 p-2 rounded-full mt-1">
+                                <i data-lucide="check" class="text-green-600" size="20"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-slate-800">Ambiente de confianza</p>
+                                <p class="text-slate-500">Tu hijo aprende sin miedo al error, contigo a su lado</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-gradient-to-br from-purple-100 to-pink-100 h-[500px] rounded-[50px] shadow-2xl flex items-center justify-center">
+                    <!-- TIP: Screenshot de la interfaz del día, racha, o sistema de recompensas -->
+                    <p class="text-purple-600 text-xl font-semibold text-center px-8">[IMAGEN: Interfaz de progreso diario]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: LOS 3 PILARES DEL MÉTODO -->
+    <section id="metodo" class="py-24 px-6 bg-slate-50">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-5xl font-black mb-6 gradient-text">
+                Un método que funciona
+            </h2>
+            <p class="text-xl text-slate-600 mb-20 max-w-2xl mx-auto">
+                Diseñado por educadores especializados, validado por miles de padres. Tú solo necesitas 15 minutos al día y muchas ganas de conectar con tu hijo.
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-12">
+                <!-- Pilar 1: Tacto -->
+                <div class="bg-white p-12 rounded-[40px] shadow-xl card-hover">
+                    <div class="bg-gradient-to-br from-red-500 to-red-600 w-28 h-28 rounded-3xl flex items-center justify-center mx-auto mb-8 shadow-lg">
+                        <i data-lucide="hand" size="56" class="text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4 text-slate-800">Tacto (Lija)</h3>
+                    <p class="text-slate-600 leading-relaxed text-lg">
+                        Sentir la forma de las letras antes de leerlas graba el aprendizaje en la memoria táctil para siempre.
+                    </p>
+                </div>
+
+                <!-- Pilar 2: El Choque -->
+                <div class="bg-white p-12 rounded-[40px] shadow-xl card-hover">
+                    <div class="bg-gradient-to-br from-blue-500 to-blue-600 w-28 h-28 rounded-3xl flex items-center justify-center mx-auto mb-8 shadow-lg">
+                        <i data-lucide="zap" size="56" class="text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4 text-slate-800">El Choque</h3>
+                    <p class="text-slate-600 leading-relaxed text-lg">
+                        Las locomotoras rojas chocan con los vagones azules para unir sonidos de forma fluida y sin cortes.
+                    </p>
+                </div>
+
+                <!-- Pilar 3: La Sal -->
+                <div class="bg-white p-12 rounded-[40px] shadow-xl card-hover">
+                    <div class="bg-gradient-to-br from-green-500 to-green-600 w-28 h-28 rounded-3xl flex items-center justify-center mx-auto mb-8 shadow-lg">
+                        <i data-lucide="eraser" size="56" class="text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4 text-slate-800">La Sal</h3>
+                    <p class="text-slate-600 leading-relaxed text-lg">
+                        Un espacio de juego seguro donde borrar errores al instante quita el miedo al fallo y fomenta el intento.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: TESTIMONIOS -->
+    <section id="testimonios" class="py-24 px-6 bg-white">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-5xl font-black mb-6 gradient-text">
+                Historias de padres como tú
+            </h2>
+            <p class="text-xl text-slate-600 mb-20">
+                Familias que decidieron tomar las riendas del aprendizaje de sus hijos
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonio 1 -->
+                <div class="bg-gradient-to-br from-blue-50 to-slate-50 p-8 rounded-3xl shadow-lg">
+                    <div class="flex gap-1 mb-4 justify-center">
+                        <i data-lucide="star" class="fill-yellow-400 text-yellow-400" size="20"></i>
+                        <i data-lucide="star" class="fill-yellow-400 text-yellow-400" size="20"></i>
+                        <i data-lucide="star" class="fill-yellow-400 text-yellow-400" size="20"></i>
+                        <i data-lucide="star" class="fill-yellow-400 text-yellow-400" size="20"></i>
+                        <i data-lucide="star" class="fill-yellow-400 text-yellow-400" size="20"></i>
+                    </div>
+                    <p class="font-bold text-slate-800 mb-3">"Ahora sé cómo enseñarle"</p>
+                    <p class="text-slate-600 italic mb-4">
+                        "Siempre quise enseñar a leer a mi hija con TEA pero no sabía por dónde empezar. Esta app me guía paso a paso. Ahora tenemos nuestro momento especial cada noche."
+                    </p>
+                    <p class="text-slate-400 text-sm font-semibold">María G., madre de Sofía (5 años)</p>
+                </div>
+
+                <!-- Testimonio 2 -->
+                <div class="bg-gradient-to-br from-blue-50 to-slate-50 p-8 rounded-3xl shadow-lg">
+                    <div class="flex gap-1 mb-4 justify-center">
+                        <i data-lucide="star" class="fill-yellow-400 text-yellow-400" size="20"></i>
+                        <i data-lucide="star" class="fill-yellow-400 text-yellow-400" size="20"></i>
+                        <i data-lucide="star" class="fill-yellow-400 text-yellow-400" size="20"></i>
+                        <i data-lucide="star" class="fill-yellow-400 text-yellow-400" size="20"></i>
+                        <i data-lucide="star" class="fill-yellow-400 text-yellow-400" size="20"></i>
+                    </div>
+                    <p class="font-bold text-slate-800 mb-3">"Nuestro tiempo favorito del día"</p>
+                    <p class="text-slate-600 italic mb-4">
+                        "15 minutos que cambiaron nuestra relación. Mi hijo espera con ganas 'la hora del tren'. No solo está aprendiendo a leer, estamos creando recuerdos juntos."
+                    </p>
+                    <p class="text-slate-400 text-sm font-semibold">Carlos P., padre de Lucas (6 años)</p>
+                </div>
+
+                <!-- Testimonio 3 -->
+                <div class="bg-gradient-to-br from-blue-50 to-slate-50 p-8 rounded-3xl shadow-lg">
+                    <div class="flex gap-1 mb-4 justify-center">
+                        <i data-lucide="star" class="fill-yellow-400 text-yellow-400" size="20"></i>
+                        <i data-lucide="star" class="fill-yellow-400 text-yellow-400" size="20"></i>
+                        <i data-lucide="star" class="fill-yellow-400 text-yellow-400" size="20"></i>
+                        <i data-lucide="star" class="fill-yellow-400 text-yellow-400" size="20"></i>
+                        <i data-lucide="star" class="fill-yellow-400 text-yellow-400" size="20"></i>
+                    </div>
+                    <p class="font-bold text-slate-800 mb-3">"Por fin puedo ayudarle"</p>
+                    <p class="text-slate-600 italic mb-4">
+                        "Veía a mi hijo frustrarse en el cole y yo no sabía cómo ayudarle. Con esta app tengo las herramientas. Yo manejo todo y él solo disfruta aprendiendo conmigo."
+                    </p>
+                    <p class="text-slate-400 text-sm font-semibold">Ana L., madre de Martín (7 años)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: PREMIOS Y RECONOCIMIENTOS -->
+    <section id="premios" class="py-24 px-6 bg-slate-50">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-5xl font-black mb-6 gradient-text">
+                Reconocidos por innovar
+            </h2>
+            <p class="text-xl text-slate-600 mb-20">
+                Avalado por educadores y especialistas en TEA
+            </p>
+            
+            <!-- TIP: Aquí deberías añadir logos de premios, certificaciones o instituciones que avalen el método -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-12 items-center">
+                <div class="bg-white p-8 rounded-3xl shadow-lg h-32 flex items-center justify-center">
+                    <p class="text-slate-400 font-semibold">[Logo Premio 1]</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-lg h-32 flex items-center justify-center">
+                    <p class="text-slate-400 font-semibold">[Logo Premio 2]</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-lg h-32 flex items-center justify-center">
+                    <p class="text-slate-400 font-semibold">[Logo Asociación TEA]</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-lg h-32 flex items-center justify-center">
+                    <p class="text-slate-400 font-semibold">[Certificación]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: SIN ANUNCIOS -->
+    <section class="py-24 px-6 bg-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-16 rounded-[50px] shadow-2xl">
+                <div class="bg-green-500 w-32 h-32 rounded-full flex items-center justify-center mx-auto mb-8 shadow-xl">
+                    <i data-lucide="shield-check" size="64" class="text-white"></i>
+                </div>
+                <h2 class="text-5xl font-black mb-6 text-green-900">
+                    Sin distracciones. Solo vosotros.
+                </h2>
+                <p class="text-xl text-green-700 leading-relaxed max-w-2xl mx-auto">
+                    Cero anuncios. Cero compras dentro de la app. Cero interrupciones. Solo tú, tu hijo, y el aprendizaje. Estos 15 minutos son sagrados.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: DESCARGAR -->
+    <section id="descargar" class="gradient-blue text-white py-24 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-5xl font-black mb-8">
+                Empieza hoy a enseñar a tu hijo
+            </h2>
+            <p class="text-2xl text-blue-100 mb-12 font-light">
+                Descarga gratis y descubre cómo 15 minutos al día pueden transformar vuestra relación mientras aprende a leer
+            </p>
+            
+            <!-- Botones de descarga -->
+            <div class="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+                <div class="bg-slate-900 text-white px-8 py-4 rounded-2xl flex items-center gap-4 border border-white/10 hover:bg-black transition-all cursor-pointer shadow-2xl hover:scale-105">
+                    <i data-lucide="play" class="fill-white" size="32"></i>
+                    <div class="text-left">
+                        <p class="text-xs uppercase font-bold text-slate-400 leading-none">Descargar en</p>
+                        <p class="text-2xl font-bold leading-none mt-1">Google Play</p>
+                    </div>
+                </div>
+                <div class="bg-slate-900 text-white px-8 py-4 rounded-2xl flex items-center gap-4 border border-white/10 hover:bg-black transition-all cursor-pointer shadow-2xl hover:scale-105">
+                    <i data-lucide="apple" size="32"></i>
+                    <div class="text-left">
+                        <p class="text-xs uppercase font-bold text-slate-400 leading-none">Consíguelo en el</p>
+                        <p class="text-2xl font-bold leading-none mt-1">App Store</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- QR Code -->
+            <div class="bg-white p-8 rounded-3xl inline-block shadow-2xl">
+                <div class="w-48 h-48 bg-slate-200 rounded-2xl flex items-center justify-center">
+                    <p class="text-slate-500 font-semibold text-center">[QR Code<br/>para descargar]</p>
+                    <!-- TIP: Genera un QR que dirija a la página de descarga -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-300 py-16 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <!-- Columna 1: Logo y descripción -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="bg-blue-600 p-2.5 rounded-2xl text-white">
+                            <i data-lucide="train-front" size="28"></i>
+                        </div>
+                        <span class="text-3xl font-bold text-white">KoLoKids</span>
+                    </div>
+                    <p class="text-slate-400 leading-relaxed mb-6">
+                        El Maquinista: Una herramienta para que padres enseñen a leer a sus hijos con dificultades de aprendizaje. 15 minutos al día de conexión y aprendizaje.
+                    </p>
+                    <!-- Redes sociales -->
+                    <div class="flex gap-4">
+                        <a href="#" class="bg-slate-800 p-3 rounded-xl hover:bg-blue-600 transition">
+                            <i data-lucide="instagram" size="20"></i>
+                        </a>
+                        <a href="#" class="bg-slate-800 p-3 rounded-xl hover:bg-blue-600 transition">
+                            <i data-lucide="facebook" size="20"></i>
+                        </a>
+                        <a href="#" class="bg-slate-800 p-3 rounded-xl hover:bg-blue-600 transition">
+                            <i data-lucide="youtube" size="20"></i>
+                        </a>
+                        <a href="#" class="bg-slate-800 p-3 rounded-xl hover:bg-blue-600 transition">
+                            <i data-lucide="twitter" size="20"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Columna 2: Enlaces -->
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Contacto</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-white transition">Centro de Ayuda</a></li>
+                        <li><a href="#" class="hover:text-white transition">Prensa</a></li>
+                        <li><a href="#" class="hover:text-white transition">Únete al equipo</a></li>
+                        <!-- TIP: Añade un email de contacto real -->
+                        <li><a href="mailto:hola@kolokids.org" class="hover:text-white transition">hola@kolokids.org</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Para Padres -->
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Para Padres</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-white transition">Guía de inicio</a></li>
+                        <li><a href="#" class="hover:text-white transition">Preguntas frecuentes</a></li>
+                        <li><a href="#" class="hover:text-white transition">Comunidad de padres</a></li>
+                        <li><a href="#" class="hover:text-white transition">Tips de enseñanza</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Políticas legales -->
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+                <p>© 2026 KoLoKids.org - Hecho con ❤️ para pequeños maquinistas</p>
+                <div class="flex gap-6">
+                    <a href="#privacidad" class="hover:text-white transition">Política de Privacidad</a>
+                    <a href="#" class="hover:text-white transition">Términos de Uso</a>
+                    <a href="#" class="hover:text-white transition">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
