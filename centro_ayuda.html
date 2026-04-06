@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KoLoKids - Centro de Ayuda</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Fredoka', sans-serif;
+            background: linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
+            scroll-behavior: smooth;
+        }
+        .gradient-blue { background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 50%, #60A5FA 100%); }
+        .gradient-text { background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .faq-item { transition: all 0.25s ease; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, opacity 0.25s ease, margin 0.25s ease; opacity: 0; }
+        .faq-item.open .faq-answer { max-height: 320px; opacity: 1; margin-top: 1rem; }
+        .faq-item.open .faq-icon { transform: rotate(180deg); }
+        .faq-icon { transition: transform 0.25s ease; }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <nav class="bg-white/90 backdrop-blur-sm border-b border-slate-100 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <img src="imgs/appicon.svg" alt="Logo KoLoKids" class="w-10 h-10 rounded-xl shadow-sm border border-orange-100">
+                <div>
+                    <p class="text-2xl font-bold gradient-text tracking-tight">KoLoKids</p>
+                    <p class="text-xs uppercase tracking-[0.2em] text-slate-400 font-bold">Centro de ayuda</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-3">
+                <a href="consultas_familias.html" class="inline-flex items-center gap-2 bg-white border border-slate-200 text-slate-700 px-5 py-3 rounded-full font-bold hover:bg-slate-50 transition shadow-sm">
+                    <i data-lucide="messages-square" size="18"></i>
+                    Consultas para familias
+                </a>
+                <a href="index.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-5 py-3 rounded-full font-bold hover:bg-slate-800 transition shadow-lg">
+                    <i data-lucide="arrow-left" size="18"></i>
+                    Volver a la web principal
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="gradient-blue text-white py-16 md:py-24 px-6 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-[420px] h-[420px] bg-white/5 rounded-full -mr-32 -mt-20"></div>
+        <div class="max-w-6xl mx-auto relative z-10 text-center">
+            <div class="inline-flex items-center gap-2 bg-white/15 text-white px-4 py-2 rounded-full text-sm font-bold mb-6 shadow-lg">
+                <i data-lucide="life-buoy" size="16"></i>
+                Respuestas pensadas para familias reales
+            </div>
+            <h1 class="text-4xl md:text-6xl font-black mb-6 leading-tight">
+                Todo lo que necesitas para acompañar a tu hijo con calma y confianza
+            </h1>
+            <p class="text-lg md:text-2xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
+                Aquí encontrarás respuestas claras sobre cómo usar la app, cómo adaptar las sesiones en casa, qué hacer si tu hijo se bloquea y cómo convertir el aprendizaje en un momento de conexión desde un enfoque general y familiar.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-8 px-6 bg-white">
+        <div class="max-w-5xl mx-auto">
+            <div class="bg-amber-50 border border-amber-200 rounded-[32px] p-6 md:p-8 shadow-sm">
+                <div class="flex items-start gap-4">
+                    <div class="bg-amber-500 text-white w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 shadow-lg shadow-amber-200">
+                        <i data-lucide="triangle-alert" size="22"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-black text-amber-900 mb-3">Importante</h2>
+                        <p class="text-amber-900 leading-relaxed">
+                            Este centro de ayuda comparte información general sobre el uso de KoLoKids y sobre situaciones habituales en casa. No ofrece diagnóstico, valoración individual ni consejo médico, psicológico, logopédico o pedagógico profesional.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 px-6 bg-white">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
+            <div class="bg-blue-50 border border-blue-100 rounded-[32px] p-8 shadow-lg shadow-blue-100/60">
+                <div class="bg-blue-500 w-14 h-14 rounded-2xl flex items-center justify-center mb-5 shadow-lg shadow-blue-200">
+                    <i data-lucide="play-circle" size="28" class="text-white"></i>
+                </div>
+                <h2 class="text-xl font-black text-blue-900 mb-3">Primeros pasos</h2>
+                <p class="text-blue-800 leading-relaxed">Cómo empezar, cuánto tiempo dedicar y cómo presentar la app a tu hijo sin presión.</p>
+            </div>
+            <div class="bg-green-50 border border-green-100 rounded-[32px] p-8 shadow-lg shadow-green-100/60">
+                <div class="bg-green-500 w-14 h-14 rounded-2xl flex items-center justify-center mb-5 shadow-lg shadow-green-200">
+                    <i data-lucide="heart-handshake" size="28" class="text-white"></i>
+                </div>
+                <h2 class="text-xl font-black text-green-900 mb-3">Acompañamiento cotidiano</h2>
+                <p class="text-green-800 leading-relaxed">Sugerencias prácticas para ayudar sin agobiar, reforzar la motivación y sostener las rutinas en casa.</p>
+            </div>
+            <div class="bg-amber-50 border border-amber-100 rounded-[32px] p-8 shadow-lg shadow-amber-100/60">
+                <div class="bg-amber-500 w-14 h-14 rounded-2xl flex items-center justify-center mb-5 shadow-lg shadow-amber-200">
+                    <i data-lucide="shield-check" size="28" class="text-white"></i>
+                </div>
+                <h2 class="text-xl font-black text-amber-900 mb-3">Seguridad y privacidad</h2>
+                <p class="text-amber-800 leading-relaxed">Información clara sobre datos, anuncios, compras dentro de la app y uso seguro.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-8 px-6">
+        <div class="max-w-6xl mx-auto bg-slate-900 text-slate-300 rounded-[40px] p-8 md:p-10 shadow-2xl">
+            <div class="grid md:grid-cols-3 gap-6 items-start">
+                <div>
+                    <h2 class="text-2xl font-black text-white mb-3">Atajos útiles</h2>
+                    <p class="text-slate-400 leading-relaxed">Si vas con prisa, empieza por estas tres ideas clave para que la experiencia funcione bien en casa.</p>
+                </div>
+                <div class="bg-white/5 rounded-3xl p-6 border border-white/10">
+                    <p class="text-white font-bold mb-2">1. Sesiones cortas</p>
+                    <p class="text-slate-400 text-sm leading-relaxed">Mejor 10-15 minutos tranquilos que una sesión larga con cansancio o frustración.</p>
+                </div>
+                <div class="bg-white/5 rounded-3xl p-6 border border-white/10">
+                    <p class="text-white font-bold mb-2">2. Sin presión</p>
+                    <p class="text-slate-400 text-sm leading-relaxed">Si hoy no sale, no pasa nada. La constancia amable suele dar mejores resultados que exigir demasiado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-14">
+                <h2 class="text-4xl md:text-5xl font-black mb-5 gradient-text">Preguntas frecuentes</h2>
+                <p class="text-lg text-slate-500 max-w-3xl mx-auto leading-relaxed">Hemos reunido dudas reales que suelen tener las familias al empezar. Pulsa en cada pregunta para ver la respuesta.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+                <div class="space-y-4">
+                    <div class="faq-item bg-white rounded-[28px] border border-slate-200 shadow-sm p-6">
+                        <button class="faq-trigger w-full flex items-start justify-between gap-4 text-left">
+                            <div>
+                                <p class="text-xs font-bold uppercase tracking-[0.2em] text-blue-500 mb-2">Primeros pasos</p>
+                                <h3 class="text-xl font-black text-slate-900">¿Cómo empiezo a usar KoLoKids con mi hijo?</h3>
+                            </div>
+                            <i data-lucide="chevron-down" size="22" class="faq-icon text-slate-400 shrink-0 mt-1"></i>
+                        </button>
+                        <div class="faq-answer text-slate-600 leading-relaxed">
+                            Empieza presentando la app como un momento compartido, no como una obligación. Elige una hora tranquila del día, abre una lección sencilla y acompaña a tu hijo paso a paso. Lo importante al principio no es avanzar mucho, sino que se sienta seguro y acompañado.
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white rounded-[28px] border border-slate-200 shadow-sm p-6">
+                        <button class="faq-trigger w-full flex items-start justify-between gap-4 text-left">
+                            <div>
+                                <p class="text-xs font-bold uppercase tracking-[0.2em] text-blue-500 mb-2">Rutina</p>
+                                <h3 class="text-xl font-black text-slate-900">¿Cuánto tiempo recomendamos cada día?</h3>
+                            </div>
+                            <i data-lucide="chevron-down" size="22" class="faq-icon text-slate-400 shrink-0 mt-1"></i>
+                        </button>
+                        <div class="faq-answer text-slate-600 leading-relaxed">
+                            Entre 10 y 15 minutos suelen funcionar muy bien. Si tu hijo está cansado, es mejor una sesión más corta pero positiva. La regularidad diaria vale más que intentar hacer mucho de golpe.
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white rounded-[28px] border border-slate-200 shadow-sm p-6">
+                        <button class="faq-trigger w-full flex items-start justify-between gap-4 text-left">
+                            <div>
+                                <p class="text-xs font-bold uppercase tracking-[0.2em] text-blue-500 mb-2">Emoción</p>
+                                <h3 class="text-xl font-black text-slate-900">¿Qué hago si mi hijo se frustra o pierde el interés?</h3>
+                            </div>
+                            <i data-lucide="chevron-down" size="22" class="faq-icon text-slate-400 shrink-0 mt-1"></i>
+                        </button>
+                        <div class="faq-answer text-slate-600 leading-relaxed">
+                            Para la actividad antes de que la frustración crezca. Valida lo que siente, celebra lo que sí ha conseguido y retómalo más tarde. Puedes bajar el ritmo, repetir una lección más sencilla o convertir el ejercicio en un juego breve. La prioridad siempre es proteger el vínculo.
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white rounded-[28px] border border-slate-200 shadow-sm p-6">
+                        <button class="faq-trigger w-full flex items-start justify-between gap-4 text-left">
+                            <div>
+                                <p class="text-xs font-bold uppercase tracking-[0.2em] text-blue-500 mb-2">Aprendizaje</p>
+                                <h3 class="text-xl font-black text-slate-900">¿Y si mi hijo tiene TEA, dislexia o dificultades de lenguaje?</h3>
+                            </div>
+                            <i data-lucide="chevron-down" size="22" class="faq-icon text-slate-400 shrink-0 mt-1"></i>
+                        </button>
+                        <div class="faq-answer text-slate-600 leading-relaxed">
+                            La app está pensada para acompañar diferentes ritmos y perfiles de aprendizaje, pero no sustituye la valoración de un profesional. Úsala como apoyo en casa, adaptando el ritmo, el tono y la exigencia a lo que tu hijo necesite. Si ya trabajáis con un especialista, esta herramienta puede complementar muy bien ese proceso.
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white rounded-[28px] border border-slate-200 shadow-sm p-6">
+                        <button class="faq-trigger w-full flex items-start justify-between gap-4 text-left">
+                            <div>
+                                <p class="text-xs font-bold uppercase tracking-[0.2em] text-blue-500 mb-2">Familia</p>
+                                <h3 class="text-xl font-black text-slate-900">¿Puede usar la app otro familiar además de la madre o el padre?</h3>
+                            </div>
+                            <i data-lucide="chevron-down" size="22" class="faq-icon text-slate-400 shrink-0 mt-1"></i>
+                        </button>
+                        <div class="faq-answer text-slate-600 leading-relaxed">
+                            Sí. Puede acompañar cualquier adulto de referencia que mantenga una actitud tranquila, coherente y cariñosa: padre, madre, abuelo, abuela, tutor o terapeuta. Lo ideal es que todos sigan un estilo parecido para que el niño se sienta seguro.
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white rounded-[28px] border border-slate-200 shadow-sm p-6">
+                        <button class="faq-trigger w-full flex items-start justify-between gap-4 text-left">
+                            <div>
+                                <p class="text-xs font-bold uppercase tracking-[0.2em] text-blue-500 mb-2">Resultados</p>
+                                <h3 class="text-xl font-black text-slate-900">¿Cuándo empezaremos a notar avances?</h3>
+                            </div>
+                            <i data-lucide="chevron-down" size="22" class="faq-icon text-slate-400 shrink-0 mt-1"></i>
+                        </button>
+                        <div class="faq-answer text-slate-600 leading-relaxed">
+                            Cada niño tiene su ritmo. A veces los primeros avances no son “leer más”, sino tolerar mejor la actividad, mantener la atención o tener más confianza. Los progresos suelen aparecer con constancia, repetición y un entorno emocional seguro.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="faq-item bg-white rounded-[28px] border border-slate-200 shadow-sm p-6">
+                        <button class="faq-trigger w-full flex items-start justify-between gap-4 text-left">
+                            <div>
+                                <p class="text-xs font-bold uppercase tracking-[0.2em] text-green-500 mb-2">Uso diario</p>
+                                <h3 class="text-xl font-black text-slate-900">¿Qué hago si mi hijo quiere repetir siempre lo mismo?</h3>
+                            </div>
+                            <i data-lucide="chevron-down" size="22" class="faq-icon text-slate-400 shrink-0 mt-1"></i>
+                        </button>
+                        <div class="faq-answer text-slate-600 leading-relaxed">
+                            Repetir también es aprender. Si una actividad le da seguridad, úsala como punto de entrada y luego añade un pequeño cambio: una letra nueva, un sonido nuevo o una variación mínima. Ir de lo conocido a lo nuevo suele funcionar mejor que forzar el cambio.
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white rounded-[28px] border border-slate-200 shadow-sm p-6">
+                        <button class="faq-trigger w-full flex items-start justify-between gap-4 text-left">
+                            <div>
+                                <p class="text-xs font-bold uppercase tracking-[0.2em] text-green-500 mb-2">Pantallas</p>
+                                <h3 class="text-xl font-black text-slate-900">¿Es tiempo de pantalla como cualquier otro juego digital?</h3>
+                            </div>
+                            <i data-lucide="chevron-down" size="22" class="faq-icon text-slate-400 shrink-0 mt-1"></i>
+                        </button>
+                        <div class="faq-answer text-slate-600 leading-relaxed">
+                            No está planteado como un consumo pasivo ni como entretenimiento autónomo. La idea es que la pantalla sea una guía para una experiencia compartida, sensorial y activa, donde tú acompañas la actividad en todo momento.
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white rounded-[28px] border border-slate-200 shadow-sm p-6">
+                        <button class="faq-trigger w-full flex items-start justify-between gap-4 text-left">
+                            <div>
+                                <p class="text-xs font-bold uppercase tracking-[0.2em] text-green-500 mb-2">Rutina</p>
+                                <h3 class="text-xl font-black text-slate-900">¿Hay una mejor hora del día para usar la app?</h3>
+                            </div>
+                            <i data-lucide="chevron-down" size="22" class="faq-icon text-slate-400 shrink-0 mt-1"></i>
+                        </button>
+                        <div class="faq-answer text-slate-600 leading-relaxed">
+                            Suele funcionar mejor cuando el niño está regulado: ni demasiado cansado ni demasiado activado. Para algunas familias funciona después del cole; para otras, antes de cenar o por la mañana. Lo importante es elegir un hueco estable y tranquilo.
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white rounded-[28px] border border-slate-200 shadow-sm p-6">
+                        <button class="faq-trigger w-full flex items-start justify-between gap-4 text-left">
+                            <div>
+                                <p class="text-xs font-bold uppercase tracking-[0.2em] text-green-500 mb-2">Privacidad</p>
+                                <h3 class="text-xl font-black text-slate-900">¿La app recopila datos personales de mi hijo?</h3>
+                            </div>
+                            <i data-lucide="chevron-down" size="22" class="faq-icon text-slate-400 shrink-0 mt-1"></i>
+                        </button>
+                        <div class="faq-answer text-slate-600 leading-relaxed">
+                            No. El planteamiento de KoLoKids prioriza la privacidad infantil. No necesita recopilar datos personales del menor para ofrecer la experiencia principal y evita publicidad invasiva o elementos que distraigan del acompañamiento familiar.
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white rounded-[28px] border border-slate-200 shadow-sm p-6">
+                        <button class="faq-trigger w-full flex items-start justify-between gap-4 text-left">
+                            <div>
+                                <p class="text-xs font-bold uppercase tracking-[0.2em] text-green-500 mb-2">Técnico</p>
+                                <h3 class="text-xl font-black text-slate-900">¿Qué pasa si la app no se abre o algo no funciona bien?</h3>
+                            </div>
+                            <i data-lucide="chevron-down" size="22" class="faq-icon text-slate-400 shrink-0 mt-1"></i>
+                        </button>
+                        <div class="faq-answer text-slate-600 leading-relaxed">
+                            Prueba primero a cerrar y volver a abrir la app, comprobar tu conexión y reiniciar el dispositivo si hace falta. Si el problema continúa, anota qué estabais haciendo cuando ocurrió y escríbenos para poder ayudarte más rápido.
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white rounded-[28px] border border-slate-200 shadow-sm p-6">
+                        <button class="faq-trigger w-full flex items-start justify-between gap-4 text-left">
+                            <div>
+                                <p class="text-xs font-bold uppercase tracking-[0.2em] text-green-500 mb-2">Acompañamiento</p>
+                                <h3 class="text-xl font-black text-slate-900">¿Y si yo también me siento perdido al enseñar?</h3>
+                            </div>
+                            <i data-lucide="chevron-down" size="22" class="faq-icon text-slate-400 shrink-0 mt-1"></i>
+                        </button>
+                        <div class="faq-answer text-slate-600 leading-relaxed">
+                            Es completamente normal. No necesitas hacerlo perfecto. Lo más valioso para tu hijo no es que tú seas un experto, sino que estés presente, disponible y dispuesto a aprender junto a él. Ve paso a paso, apóyate en las lecciones y celebra cada pequeño avance.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6 bg-slate-50 border-y border-slate-100">
+        <div class="max-w-6xl mx-auto grid lg:grid-cols-[1.2fr_0.8fr] gap-10 items-center">
+            <div>
+                <h2 class="text-4xl font-black mb-5 gradient-text">Consejos que suelen ayudar mucho en casa</h2>
+                <div class="grid sm:grid-cols-2 gap-5">
+                    <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm">
+                        <p class="font-black text-slate-900 mb-2">Usa siempre el mismo ritual</p>
+                        <p class="text-slate-600 text-sm leading-relaxed">Una frase de inicio, un lugar tranquilo y un cierre agradable ayudan a que el niño anticipe la actividad con seguridad.</p>
+                    </div>
+                    <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm">
+                        <p class="font-black text-slate-900 mb-2">Celebra el esfuerzo, no solo el acierto</p>
+                        <p class="text-slate-600 text-sm leading-relaxed">Refuerza cuando lo intenta, cuando se regula o cuando vuelve a probar. Eso construye autoestima y tolerancia a la frustración.</p>
+                    </div>
+                    <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm">
+                        <p class="font-black text-slate-900 mb-2">Baja una marcha si hace falta</p>
+                        <p class="text-slate-600 text-sm leading-relaxed">Si el niño está saturado, vuelve a algo más fácil o simplemente termina la sesión con una sensación positiva.</p>
+                    </div>
+                    <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm">
+                        <p class="font-black text-slate-900 mb-2">Integra lo sensorial fuera de la app</p>
+                        <p class="text-slate-600 text-sm leading-relaxed">Puedes repetir letras, sonidos o sílabas con lija, arena, sal, plastilina o juegos de movimiento para reforzar lo aprendido.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-[36px] p-8 border border-slate-200 shadow-xl">
+                <div class="bg-blue-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-5 text-blue-600">
+                    <i data-lucide="mail" size="28"></i>
+                </div>
+                <h3 class="text-2xl font-black text-slate-900 mb-3">¿No encuentras tu respuesta?</h3>
+                <p class="text-slate-600 leading-relaxed mb-6">Escríbenos y cuéntanos qué necesitas. Si nos explicas la edad del niño, la dificultad principal y el momento en el que aparece el problema, podremos orientarte mejor.</p>
+                <a href="mailto:hola@kolokids.org?subject=Consulta%20Centro%20de%20Ayuda%20KoLoKids" class="inline-flex items-center gap-3 bg-slate-900 text-white px-6 py-3 rounded-2xl font-bold shadow-lg hover:bg-slate-800 transition">
+                    <span class="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center shadow-md shadow-blue-900/30">
+                        <i data-lucide="mail" size="18"></i>
+                    </span>
+                    <span>hola@kolokids.org</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 py-12 px-6 text-center border-t border-slate-800">
+        <p class="text-sm">© 2026 KoLoKids.org - Hecho con ❤️ para familias reales.</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        document.querySelectorAll('.faq-trigger').forEach((trigger) => {
+            trigger.addEventListener('click', () => {
+                const item = trigger.closest('.faq-item');
+                item.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

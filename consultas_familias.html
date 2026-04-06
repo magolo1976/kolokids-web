@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KoLoKids - Consultas para Familias</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Fredoka', sans-serif;
+            background: linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
+        }
+        .gradient-blue { background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 50%, #60A5FA 100%); }
+        .gradient-text { background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-hover { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+        .card-hover:hover { transform: translateY(-6px); box-shadow: 0 18px 36px rgba(15, 23, 42, 0.10); }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <nav class="bg-white/90 backdrop-blur-sm border-b border-slate-100 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <img src="imgs/appicon.svg" alt="Logo KoLoKids" class="w-10 h-10 rounded-xl shadow-sm border border-orange-100">
+                <div>
+                    <p class="text-2xl font-bold gradient-text tracking-tight">KoLoKids</p>
+                    <p class="text-xs uppercase tracking-[0.2em] text-slate-400 font-bold">Consultas para familias</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-3">
+                <a href="centro_ayuda.html" class="inline-flex items-center gap-2 bg-white border border-slate-200 text-slate-700 px-5 py-3 rounded-full font-bold hover:bg-slate-50 transition shadow-sm">
+                    <i data-lucide="life-buoy" size="18"></i>
+                    Centro de ayuda
+                </a>
+                <a href="index.html" class="inline-flex items-center gap-2 bg-slate-900 text-white px-5 py-3 rounded-full font-bold hover:bg-slate-800 transition shadow-lg">
+                    <i data-lucide="arrow-left" size="18"></i>
+                    Volver a la web principal
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="gradient-blue text-white py-16 md:py-24 px-6 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-[380px] h-[380px] bg-white/5 rounded-full -ml-24 -mt-20"></div>
+        <div class="absolute bottom-0 right-0 w-[420px] h-[420px] bg-white/5 rounded-full -mr-24 -mb-24"></div>
+        <div class="max-w-6xl mx-auto relative z-10 text-center">
+            <div class="inline-flex items-center gap-2 bg-white/15 text-white px-4 py-2 rounded-full text-sm font-bold mb-6 shadow-lg">
+                <i data-lucide="messages-square" size="16"></i>
+                Un espacio pensado para acompañarte
+            </div>
+            <h1 class="text-4xl md:text-6xl font-black mb-6 leading-tight">
+                Consultas para familias: dudas reales, respuestas útiles
+            </h1>
+            <p class="text-lg md:text-2xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
+                Si algo te preocupa, no sabes cómo enfocar una sesión o quieres compartir una duda sobre el uso de la app en casa, aquí tienes ideas prácticas para saber cuándo escribirnos y qué tipo de ayuda general podemos ofrecerte.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-8 px-6 bg-white">
+        <div class="max-w-5xl mx-auto">
+            <div class="bg-amber-50 border border-amber-200 rounded-[32px] p-6 md:p-8 shadow-sm">
+                <div class="flex items-start gap-4">
+                    <div class="bg-amber-500 text-white w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 shadow-lg shadow-amber-200">
+                        <i data-lucide="triangle-alert" size="22"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-black text-amber-900 mb-3">Importante</h2>
+                        <p class="text-amber-900 leading-relaxed">
+                            Este espacio ofrece acompañamiento general sobre el uso de KoLoKids y sobre experiencias familiares en casa. No sustituye una valoración profesional, no ofrece diagnósticos y no debe entenderse como consejo médico, psicológico, logopédico ni pedagógico individualizado.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 px-6 bg-white">
+        <div class="max-w-6xl mx-auto text-center mb-12">
+            <h2 class="text-4xl md:text-5xl font-black mb-5 gradient-text">¿Para qué sirve este espacio?</h2>
+            <p class="text-lg text-slate-500 max-w-3xl mx-auto leading-relaxed">No es solo un correo de soporte. Es un lugar para compartir dudas sobre el uso de la app y recibir orientación general desde la experiencia de acompañar el aprendizaje en casa.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="card-hover bg-blue-50 border border-blue-100 rounded-[32px] p-8 shadow-lg shadow-blue-100/60">
+                <div class="bg-blue-500 w-14 h-14 rounded-2xl flex items-center justify-center mb-5 shadow-lg shadow-blue-200">
+                    <i data-lucide="compass" size="28" class="text-white"></i>
+                </div>
+                <h3 class="text-xl font-black text-blue-900 mb-3">Orientación práctica</h3>
+                <p class="text-blue-800 leading-relaxed">Compartimos sugerencias generales para enfocar mejor una sesión, ajustar expectativas o adaptar el uso de la app al momento que vive tu familia.</p>
+            </div>
+            <div class="card-hover bg-green-50 border border-green-100 rounded-[32px] p-8 shadow-lg shadow-green-100/60">
+                <div class="bg-green-500 w-14 h-14 rounded-2xl flex items-center justify-center mb-5 shadow-lg shadow-green-200">
+                    <i data-lucide="heart" size="28" class="text-white"></i>
+                </div>
+                <h3 class="text-xl font-black text-green-900 mb-3">Acompañamiento cotidiano</h3>
+                <p class="text-green-800 leading-relaxed">Cuando aparecen frustración, cansancio o inseguridad, podemos compartir ideas generales para vivir ese proceso con más calma en casa.</p>
+            </div>
+            <div class="card-hover bg-amber-50 border border-amber-100 rounded-[32px] p-8 shadow-lg shadow-amber-100/60">
+                <div class="bg-amber-500 w-14 h-14 rounded-2xl flex items-center justify-center mb-5 shadow-lg shadow-amber-200">
+                    <i data-lucide="book-open-check" size="28" class="text-white"></i>
+                </div>
+                <h3 class="text-xl font-black text-amber-900 mb-3">Uso de la app en casa</h3>
+                <p class="text-amber-800 leading-relaxed">Compartimos sugerencias generales sobre ritmo, repetición, motivación y formas de aprovechar mejor cada bloque de aprendizaje dentro de la rutina familiar.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6 bg-slate-50 border-y border-slate-100">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-black mb-5 gradient-text">Situaciones en las que suele ayudar escribirnos</h2>
+                <p class="text-lg text-slate-500 max-w-3xl mx-auto leading-relaxed">Estos son ejemplos muy comunes. Si te reconoces en alguno, esta página está hecha para ti.</p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-6">
+                <div class="bg-white rounded-[32px] p-8 border border-slate-200 shadow-sm">
+                    <h3 class="text-2xl font-black text-slate-900 mb-3">Mi hijo se bloquea o rechaza la actividad</h3>
+                    <p class="text-slate-600 leading-relaxed">Podemos compartir contigo ideas generales para revisar si el momento del día, la duración o la forma de presentar la actividad están siendo demasiado exigentes.</p>
+                </div>
+                <div class="bg-white rounded-[32px] p-8 border border-slate-200 shadow-sm">
+                    <h3 class="text-2xl font-black text-slate-900 mb-3">No sé si estoy enseñando “bien”</h3>
+                    <p class="text-slate-600 leading-relaxed">Muchas familias sienten esta inseguridad. Podemos compartir pautas sencillas y no clínicas para que ganes claridad y confianza al acompañar.</p>
+                </div>
+                <div class="bg-white rounded-[32px] p-8 border border-slate-200 shadow-sm">
+                    <h3 class="text-2xl font-black text-slate-900 mb-3">No avanza como yo esperaba</h3>
+                    <p class="text-slate-600 leading-relaxed">Podemos ayudarte a mirar el proceso con más perspectiva: a veces sí hay avances, pero aparecen primero en atención, tolerancia, regulación o seguridad emocional.</p>
+                </div>
+                <div class="bg-white rounded-[32px] p-8 border border-slate-200 shadow-sm">
+                    <h3 class="text-2xl font-black text-slate-900 mb-3">No sé cómo adaptar la app a su perfil</h3>
+                    <p class="text-slate-600 leading-relaxed">Si tu hijo tiene TEA, dislexia, TDAH, dificultades de lenguaje u otra necesidad, podemos compartir recomendaciones generales de uso más amable y realista, sin sustituir la orientación de un profesional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6 bg-white">
+        <div class="max-w-6xl mx-auto grid lg:grid-cols-[1.05fr_0.95fr] gap-10 items-start">
+            <div>
+                <h2 class="text-4xl font-black mb-5 gradient-text">Qué nos puedes contar para poder ayudarte mejor</h2>
+                <p class="text-slate-600 leading-relaxed mb-8">No hace falta escribir algo perfecto. Pero si incluyes algunos datos básicos, podremos darte una respuesta general más útil desde el principio.</p>
+                <div class="space-y-4">
+                    <div class="bg-blue-50 rounded-3xl p-6 border border-blue-100">
+                        <p class="font-black text-blue-900 mb-2">Edad del niño y dificultad principal</p>
+                        <p class="text-blue-800 text-sm leading-relaxed">Por ejemplo: frustración al empezar, rechazo a las letras, problemas para mantener la atención o dificultad para unir sonidos.</p>
+                    </div>
+                    <div class="bg-green-50 rounded-3xl p-6 border border-green-100">
+                        <p class="font-black text-green-900 mb-2">Qué estabais haciendo cuando surgió el problema</p>
+                        <p class="text-green-800 text-sm leading-relaxed">La lección concreta, la duración, el momento del día y cómo reaccionó tu hijo nos ayudan muchísimo a entender el contexto.</p>
+                    </div>
+                    <div class="bg-amber-50 rounded-3xl p-6 border border-amber-100">
+                        <p class="font-black text-amber-900 mb-2">Qué has probado ya</p>
+                        <p class="text-amber-800 text-sm leading-relaxed">Si ya intentaste parar antes, repetir otra actividad o cambiar de tono, cuéntanoslo para no recomendarte lo mismo.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-slate-900 text-slate-300 rounded-[40px] p-8 md:p-10 shadow-2xl">
+                <div class="bg-blue-600 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-blue-900/40">
+                    <i data-lucide="mail" size="30" class="text-white"></i>
+                </div>
+                <h3 class="text-3xl font-black text-white mb-4">Escríbenos tu consulta</h3>
+                <p class="text-slate-400 leading-relaxed mb-8">Si quieres compartir una duda sobre el uso de la app o sobre cómo estáis viviendo el proceso en casa, puedes escribirnos directamente. Te recomendamos poner un asunto claro y explicar en pocas líneas qué está ocurriendo.</p>
+                <a href="mailto:hola@kolokids.org?subject=Consulta%20para%20familias%20KoLoKids" class="inline-flex items-center gap-3 bg-white text-slate-900 px-6 py-3 rounded-2xl font-bold shadow-lg hover:bg-slate-100 transition">
+                    <span class="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center shadow-md shadow-blue-900/30">
+                        <i data-lucide="mail" size="18" class="text-white"></i>
+                    </span>
+                    <span>hola@kolokids.org</span>
+                </a>
+                <div class="mt-8 pt-8 border-t border-white/10 space-y-4 text-sm text-slate-400">
+                    <p class="flex items-start gap-3"><i data-lucide="sparkles" size="18" class="text-blue-400 mt-0.5"></i><span>Las consultas se centran en el uso de la app y en experiencias familiares alrededor del aprendizaje en casa.</span></p>
+                    <p class="flex items-start gap-3"><i data-lucide="clock-3" size="18" class="text-blue-400 mt-0.5"></i><span>Cuanto más concreta sea tu consulta, más fácil será responderte con sugerencias generales útiles y realistas.</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6 bg-white">
+        <div class="max-w-5xl mx-auto text-center">
+            <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-10 md:p-14 rounded-[40px] border border-blue-100 shadow-xl shadow-slate-200/60">
+                <h2 class="text-3xl md:text-4xl font-black mb-5 text-slate-900">A veces una pequeña orientación cambia mucho el proceso</h2>
+                <p class="text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto">No hace falta esperar a estar muy perdido para pedir ayuda. Muchas veces basta con ajustar el momento, el tono o la forma de acompañar para que la experiencia mejore muchísimo.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 py-12 px-6 text-center border-t border-slate-800">
+        <p class="text-sm">© 2026 KoLoKids.org - Hecho con ❤️ para familias reales.</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

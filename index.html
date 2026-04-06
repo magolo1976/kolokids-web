@@ -13,7 +13,7 @@
             scroll-behavior: smooth;
         }
         .gradient-blue { background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 50%, #60A5FA 100%); }
-        .gradient-text { background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .gradient-text { background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .card-hover { transition: transform 0.3s, box-shadow 0.3s; }
         .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
         .carousel-slide { transition: opacity 0.7s ease-in-out; }
@@ -29,10 +29,12 @@
                 <img src="imgs/appicon.svg" alt="Logo KoLoKids" class="w-10 h-10 rounded-xl shadow-sm border border-orange-100">
                 <span class="text-2xl font-bold gradient-text tracking-tight">KoLoKids</span>
             </div>
-            <div class="hidden md:flex gap-10 font-semibold text-slate-600 text-sm uppercase tracking-wider">
+            <div class="hidden md:flex gap-8 font-semibold text-slate-600 text-sm uppercase tracking-wider">
+                <a href="#contenido" class="hover:text-blue-600 transition">Contenido</a>
                 <a href="#metodo" class="hover:text-blue-600 transition">El Método</a>
                 <a href="#app" class="hover:text-blue-600 transition">La App</a>
                 <a href="#privacidad" class="hover:text-blue-600 transition">Privacidad</a>
+                <a href="#contacto" class="hover:text-blue-600 transition">Contacto</a>
             </div>
             <a href="#descargar" class="gradient-blue text-white px-6 py-2.5 rounded-full font-bold shadow-md hover:shadow-xl transition-all hover:scale-105 text-sm">
                 DESCARGAR GRATIS
@@ -95,6 +97,50 @@
             </div>
         </div>
     </div>
+
+    <!-- SECCIÓN: CONTENIDO -->
+    <section id="contenido" class="py-24 px-6 bg-white">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-black mb-6 gradient-text">
+                Recursos para enseñar paso a paso.
+            </h2>
+            <p class="text-lg text-slate-500 mb-16 max-w-3xl mx-auto font-medium leading-relaxed">
+                100 días de lecciones guiadas para que puedas enseñar a tu hijo con total confianza. 5 niveles progresivos diseñados para acompañarte en cada etapa del aprendizaje.
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-10 mt-16">
+                <div class="card-hover bg-gradient-to-br from-red-50 to-red-100 p-10 rounded-[40px] border border-red-100 shadow-lg shadow-red-100/60">
+                    <div class="bg-red-500 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-red-200">
+                        <i data-lucide="hand-heart" size="40" class="text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-black mb-3 text-red-900">Tú Guías</h3>
+                    <p class="text-red-700 leading-relaxed text-sm">
+                        Instrucciones claras en cada lección para que sepas exactamente qué hacer. Guía las manos de tu hijo mientras trazan letras en lija, chocan trenes y escriben en sal.
+                    </p>
+                </div>
+
+                <div class="card-hover bg-gradient-to-br from-blue-50 to-blue-100 p-10 rounded-[40px] border border-blue-100 shadow-lg shadow-blue-100/60">
+                    <div class="bg-blue-500 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-blue-200">
+                        <i data-lucide="heart-handshake" size="40" class="text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-black mb-3 text-blue-900">Tú Conectas</h3>
+                    <p class="text-blue-700 leading-relaxed text-sm">
+                        15 minutos diarios de atención plena con tu hijo. Crean lazos afectivos mientras aprenden juntos. No es tiempo de pantalla, es tiempo de calidad.
+                    </p>
+                </div>
+
+                <div class="card-hover bg-gradient-to-br from-green-50 to-green-100 p-10 rounded-[40px] border border-green-100 shadow-lg shadow-green-100/60">
+                    <div class="bg-green-500 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-green-200">
+                        <i data-lucide="users" size="40" class="text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-black mb-3 text-green-900">Tú Enseñas</h3>
+                    <p class="text-green-700 leading-relaxed text-sm">
+                        No necesitas ser profesor. El método sensorial es tan intuitivo que cualquier padre puede aplicarlo. Tú eres el mejor maestro de tu hijo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- SECCIÓN: LOS 3 PILARES -->
     <section id="metodo" class="py-24 px-6 bg-white">
@@ -178,24 +224,50 @@
         </div>
     </section>
 
+    <!-- SECCIÓN: SIN DISTRACCIONES -->
+    <section class="py-24 px-6 bg-white">
+        <div class="max-w-5xl mx-auto text-center">
+            <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-10 md:p-16 rounded-[50px] shadow-2xl shadow-slate-200/70 border border-green-100">
+                <div class="bg-green-500 w-24 h-24 md:w-28 md:h-28 rounded-full flex items-center justify-center mx-auto mb-8 shadow-xl shadow-green-200">
+                    <i data-lucide="shield-check" size="48" class="text-white"></i>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-black mb-6 text-green-900">
+                    Sin distracciones. Solo vosotros.
+                </h2>
+                <p class="text-lg md:text-xl text-green-800 leading-relaxed max-w-3xl mx-auto">
+                    Cero anuncios. Cero compras dentro de la app. Cero interrupciones. Solo tú, tu hijo, y el aprendizaje. Estos 15 minutos son sagrados.
+                </p>
+            </div>
+        </div>
+    </section>
+
     <!-- SECCIÓN: DESCARGAR -->
     <section id="descargar" class="gradient-blue text-white py-24 px-6">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-5xl font-black mb-8">Empieza hoy el viaje</h2>
-            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+            <h2 class="text-4xl md:text-5xl font-black mb-8">Empieza hoy a enseñar a tu hijo</h2>
+            <p class="text-xl md:text-2xl text-blue-100 mb-12 font-light max-w-3xl mx-auto leading-relaxed">
+                Descarga gratis y descubre cómo 15 minutos al día pueden transformar vuestra relación mientras aprende a leer.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center mb-14">
                 <div class="bg-slate-900 text-white px-8 py-4 rounded-2xl flex items-center gap-4 hover:bg-black transition-all cursor-pointer shadow-2xl hover:scale-105 border border-white/10">
                     <i data-lucide="play" class="fill-white" size="32"></i>
                     <div class="text-left">
-                        <p class="text-[10px] uppercase font-bold text-slate-400">Descargar en</p>
-                        <p class="text-xl font-bold">Google Play</p>
+                        <p class="text-[10px] uppercase font-bold text-slate-400 leading-none">Descargar en</p>
+                        <p class="text-xl font-bold mt-1">Google Play</p>
                     </div>
                 </div>
                 <div class="bg-slate-900 text-white px-8 py-4 rounded-2xl flex items-center gap-4 hover:bg-black transition-all cursor-pointer shadow-2xl hover:scale-105 border border-white/10">
                     <i data-lucide="apple" size="32"></i>
                     <div class="text-left">
-                        <p class="text-[10px] uppercase font-bold text-slate-400">Pronto en</p>
-                        <p class="text-xl font-bold">App Store</p>
+                        <p class="text-[10px] uppercase font-bold text-slate-400 leading-none">Consíguelo en el</p>
+                        <p class="text-xl font-bold mt-1">App Store</p>
                     </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 md:p-8 rounded-3xl inline-block shadow-2xl shadow-blue-900/20">
+                <div class="w-44 h-44 md:w-48 md:h-48 bg-slate-200 rounded-2xl flex items-center justify-center text-center px-6">
+                    <p class="text-slate-500 font-semibold">[QR Code para descargar]</p>
                 </div>
             </div>
         </div>
@@ -245,8 +317,42 @@
         </div>
     </section>
 
+    <!-- CONTACTO -->
+    <section id="contacto" class="py-24 px-6 bg-white">
+        <div class="max-w-5xl mx-auto">
+            <div class="bg-slate-900 text-slate-300 p-10 md:p-12 rounded-[40px] shadow-2xl">
+                <div class="grid md:grid-cols-[1.4fr_1fr] gap-12 items-start">
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-black text-white mb-4">Contacto</h2>
+                        <p class="text-slate-400 leading-relaxed max-w-2xl mb-8">
+                            Si quieres hablar con nosotros, resolver dudas sobre la app o conocer mejor el método, estaremos encantados de ayudarte.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="mailto:hola@kolokids.org" class="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-full font-bold hover:bg-blue-500 transition">
+                                <i data-lucide="mail" size="18"></i>
+                                hola@kolokids.org
+                            </a>
+                            <a href="#privacidad" class="inline-flex items-center gap-2 bg-white/10 text-white px-6 py-3 rounded-full font-bold hover:bg-white/20 transition">
+                                <i data-lucide="shield-check" size="18"></i>
+                                Ver privacidad
+                            </a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-sm tracking-wider mb-4">Ayuda rápida</h3>
+                        <ul class="space-y-3 text-slate-300">
+                            <li class="flex items-center gap-3"><i data-lucide="circle-help" size="18" class="text-blue-400"></i><a href="centro_ayuda.html" class="hover:text-white transition">Centro de ayuda</a></li>
+                            <li class="flex items-center gap-3"><i data-lucide="messages-square" size="18" class="text-blue-400"></i><a href="consultas_familias.html" class="hover:text-white transition">Consultas para familias</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- FOOTER -->
-    <footer class="bg-slate-900 text-slate-400 py-12 px-6 text-center">
+    <footer class="bg-slate-900 text-slate-400 py-12 px-6 text-center border-t border-slate-800">
         <p class="text-sm">© 2026 KoLoKids.org - Hecho con ❤️ para familias reales.</p>
     </footer>
 
