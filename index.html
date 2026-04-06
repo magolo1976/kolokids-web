@@ -3,255 +3,272 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KoLoKids - El Maquinista | Escuela de Lectura Sensorial</title>
+    <title>KoLoKids - El Maquinista | Enseña a leer con amor y sentido</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap');
-        body { font-family: 'Fredoka', sans-serif; }
-        .train-gradient { background: linear-gradient(135deg, #1E3A8A 0%, #2563EB 100%); }
-        .hero-image-container {
-            filter: drop-shadow(0 20px 30px rgba(0,0,0,0.3));
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap');
+        body { 
+            font-family: 'Fredoka', sans-serif;
+            scroll-behavior: smooth;
         }
+        .gradient-blue { background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 50%, #60A5FA 100%); }
+        .gradient-text { background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-hover { transition: transform 0.3s, box-shadow 0.3s; }
+        .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+        .carousel-slide { transition: opacity 0.7s ease-in-out; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800">
+<body class="bg-white text-slate-800">
 
-    <!-- NAVBAR -->
-    <nav class="bg-white border-b border-slate-100 sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-2">
-                <div class="bg-blue-600 p-2 rounded-lg text-white">
-                    <i data-lucide="train-front"></i>
-                </div>
-                <span class="text-2xl font-bold text-blue-900 tracking-tight">KoLoKids</span>
+    <!-- NAVBAR STICKY -->
+    <nav class="bg-white/95 backdrop-blur-sm border-b border-slate-100 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <!-- ICONO DE KOLO EN EL NAVBAR (Carga el appicon.svg) -->
+                <img src="imgs/appicon.svg" alt="Logo KoLoKids" class="w-10 h-10 rounded-xl shadow-sm border border-orange-100">
+                <span class="text-2xl font-bold gradient-text tracking-tight">KoLoKids</span>
             </div>
-            <div class="hidden md:flex gap-8 font-semibold text-slate-500">
-                <a href="#metodo" class="hover:text-blue-600 transition">Método</a>
+            <div class="hidden md:flex gap-10 font-semibold text-slate-600 text-sm uppercase tracking-wider">
+                <a href="#metodo" class="hover:text-blue-600 transition">El Método</a>
                 <a href="#app" class="hover:text-blue-600 transition">La App</a>
                 <a href="#privacidad" class="hover:text-blue-600 transition">Privacidad</a>
             </div>
-            <a href="#descarga" class="bg-blue-600 text-white px-6 py-2 rounded-full font-bold shadow-lg hover:bg-blue-700 transition">¡Descargar Ahora!</a>
+            <a href="#descargar" class="gradient-blue text-white px-6 py-2.5 rounded-full font-bold shadow-md hover:shadow-xl transition-all hover:scale-105 text-sm">
+                DESCARGAR GRATIS
+            </a>
         </div>
     </nav>
 
     <!-- HERO SECTION -->
-    <header id="app" class="train-gradient text-white py-12 md:py-24 px-6 relative overflow-hidden">
-        <!-- Decoración de fondo -->
-        <div class="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -mr-48 -mt-48"></div>
+    <section class="gradient-blue text-white py-16 md:py-28 px-6 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-white/5 rounded-full -mr-32 -mt-32"></div>
         
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
             <div class="text-center md:text-left">
-                <div class="inline-block bg-yellow-400 text-blue-900 px-4 py-1 rounded-full text-sm font-bold mb-4 uppercase tracking-wider">
-                    🎉 ¡Ya disponible en móviles!
+                <div class="inline-flex items-center gap-2 bg-yellow-400 text-blue-900 px-4 py-1.5 rounded-full text-xs font-bold mb-6 shadow-lg uppercase tracking-widest">
+                    🚀 ¡Inicia el viaje a la lectura!
                 </div>
-                <h1 class="text-5xl md:text-6xl font-black mb-6 leading-tight">Aprender a leer es un viaje emocionante.</h1>
-                <p class="text-xl text-blue-100 mb-10 max-w-lg">El Maquinista utiliza un método sensorial diseñado para niños con TEA y dificultades de aprendizaje. ¡Súbete al tren del conocimiento!</p>
                 
-                <!-- BOTONES TIENDA -->
-                <div id="descarga" class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                    <!-- Google Play Mock -->
-                    <div class="bg-slate-900 text-white px-6 py-3 rounded-2xl flex items-center gap-3 border border-white/10 hover:bg-black transition-colors cursor-pointer shadow-xl">
-                        <i data-lucide="play" class="fill-white" size="24"></i>
-                        <div class="text-left">
-                            <p class="text-[10px] uppercase font-bold text-slate-400 leading-none">Descargar en</p>
-                            <p class="text-lg font-bold leading-none mt-1">Google Play</p>
-                        </div>
-                    </div>
-                    <!-- App Store Mock -->
-                    <div class="bg-slate-900 text-white px-6 py-3 rounded-2xl flex items-center gap-3 border border-white/10 hover:bg-black transition-colors cursor-pointer shadow-xl">
-                        <i data-lucide="apple" size="24"></i>
-                        <div class="text-left">
-                            <p class="text-[10px] uppercase font-bold text-slate-400 leading-none">Consíguelo en el</p>
-                            <p class="text-lg font-bold leading-none mt-1">App Store</p>
-                        </div>
-                    </div>
+                <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight">
+                    Tú eres el mejor guía para su aprendizaje
+                </h1>
+                
+                <p class="text-xl md:text-2xl text-blue-100 mb-10 max-w-xl font-light leading-relaxed">
+                    No es un juego solitario. Es una herramienta para que <strong>tú</strong> enseñes a leer a tu hijo con dificultades de aprendizaje a través del tacto y el juego.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#descargar" class="bg-white text-blue-600 px-8 py-4 rounded-full text-lg font-bold shadow-2xl hover:scale-105 transition-transform inline-flex items-center gap-2 justify-center">
+                        <i data-lucide="download" size="20"></i> Probar Gratis
+                    </a>
                 </div>
             </div>
 
-            <!-- IMAGEN DEL TREN MAGLEV -->
-            <div class="flex justify-center hero-image-container">
+            <div class="flex justify-center relative">
                 <div class="relative group">
-                    <!-- Resplandor -->
                     <div class="absolute inset-0 bg-blue-400 rounded-full blur-3xl opacity-20 group-hover:opacity-40 transition-opacity"></div>
-                    <!-- Imagen del Tren 5 -->
-                    <img src="train_5.jpg" 
-                         alt="Maestro Maglev" 
-                         class="w-80 md:w-[450px] relative z-10 animate-bounce-slight" 
-                         style="animation-duration: 4s;"
-                         onerror="this.src='logo_tren.png'">
+                    <img src="imgs/logo_tren.png" alt="Kolo el personaje" class="w-72 md:w-96 relative z-10 animate-bounce-slight" style="animation-duration: 4s;">
                 </div>
             </div>
         </div>
-    </header>
+    </section>
 
-    <!-- STATS / PROGRESO -->
-    <div class="bg-white py-12 border-b border-slate-100">
-        <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center font-bold">
+    <!-- STATS BAR -->
+    <div class="bg-slate-50 border-y border-slate-100 py-10">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-                <p class="text-4xl text-blue-600">100</p>
-                <p class="text-slate-400 text-sm uppercase">Días de Viaje</p>
+                <p class="text-4xl font-black text-blue-600 mb-1">15'</p>
+                <p class="text-slate-400 font-bold uppercase text-xs tracking-tighter">Minutos Juntos</p>
             </div>
             <div>
-                <p class="text-4xl text-blue-600">5</p>
-                <p class="text-slate-400 text-sm uppercase">Niveles de Tren</p>
+                <p class="text-4xl font-black text-blue-600 mb-1">100</p>
+                <p class="text-slate-400 font-bold uppercase text-xs tracking-tighter">Días de Ruta</p>
             </div>
             <div>
-                <p class="text-4xl text-blue-600">0</p>
-                <p class="text-slate-400 text-sm uppercase">Publicidad</p>
+                <p class="text-4xl font-black text-blue-600 mb-1">0</p>
+                <p class="text-slate-400 font-bold uppercase text-xs tracking-tighter">Publicidad</p>
             </div>
             <div>
-                <p class="text-4xl text-blue-600">100%</p>
-                <p class="text-slate-400 text-sm uppercase">Seguro</p>
+                <p class="text-4xl font-black text-blue-600 mb-1">100%</p>
+                <p class="text-slate-400 font-bold uppercase text-xs tracking-tighter">Acompañado</p>
             </div>
         </div>
     </div>
 
-    <!-- CARRUSEL DE IMAGENES -->
-    <section class="py-16 px-6 bg-slate-50">
-        <div class="max-w-3xl mx-auto">
-            <div class="relative overflow-hidden rounded-3xl shadow-2xl bg-gradient-to-br from-slate-100 to-slate-200">
-                <!-- Imágenes del carrusel -->
-                <div class="carousel-container relative h-[600px] md:h-[700px] flex items-center justify-center">
-                    <img src="carr_1.jpg" alt="Imagen 1" class="carousel-slide absolute w-full h-full object-contain transition-opacity duration-700">
-                    <img src="carr_2.jpg" alt="Imagen 2" class="carousel-slide absolute w-full h-full object-contain transition-opacity duration-700 opacity-0">
-                    <img src="carr_3.jpg" alt="Imagen 3" class="carousel-slide absolute w-full h-full object-contain transition-opacity duration-700 opacity-0">
-                    <img src="carr_4.jpg" alt="Imagen 4" class="carousel-slide absolute w-full h-full object-contain transition-opacity duration-700 opacity-0">
-                    <img src="carr_5.jpg" alt="Imagen 5" class="carousel-slide absolute w-full h-full object-contain transition-opacity duration-700 opacity-0">
+    <!-- SECCIÓN: LOS 3 PILARES -->
+    <section id="metodo" class="py-24 px-6 bg-white">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-black mb-6 gradient-text">
+                Un método sensorial diseñado para conectar.
+            </h2>
+            <p class="text-lg text-slate-500 mb-16 max-w-2xl mx-auto font-medium">
+                Olvídate de las pantallas que aíslan al niño. El Maquinista usa el método de las vías del tren para que el aprendizaje sea físico, táctil y emocionante.
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="card-hover bg-red-50 p-10 rounded-[40px] border border-red-100">
+                    <div class="bg-red-500 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-red-200">
+                        <i data-lucide="hand" size="40" class="text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-black mb-3 text-red-900">Tacto (Lija)</h3>
+                    <p class="text-red-700 leading-relaxed text-sm">
+                        Sentir la forma de las letras antes de leerlas graba el aprendizaje en la memoria táctil para siempre.
+                    </p>
+                </div>
+
+                <div class="card-hover bg-blue-50 p-10 rounded-[40px] border border-blue-100">
+                    <div class="bg-blue-500 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-blue-200">
+                        <i data-lucide="zap" size="40" class="text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-black mb-3 text-blue-900">El Choque</h3>
+                    <p class="text-blue-700 leading-relaxed text-sm">
+                        Las locomotoras rojas chocan con los vagones azules para unir sonidos de forma fluida y sin cortes.
+                    </p>
+                </div>
+
+                <div class="card-hover bg-green-50 p-10 rounded-[40px] border border-green-100">
+                    <div class="bg-green-500 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-green-200">
+                        <i data-lucide="eraser" size="40" class="text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-black mb-3 text-green-900">La Sal</h3>
+                    <p class="text-green-700 leading-relaxed text-sm">
+                        Un espacio de juego seguro donde borrar errores al instante quita el miedo al fallo y fomenta el intento.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: CARRUSEL -->
+    <section id="app" class="py-20 px-6 bg-slate-50 overflow-hidden">
+        <div class="max-w-6xl mx-auto text-center mb-12">
+            <h2 class="text-4xl font-black gradient-text mb-4 text-center">Así es el viaje diario</h2>
+            <p class="text-slate-500 font-medium">Una interfaz diseñada para ser clara, tranquila y motivadora.</p>
+        </div>
+        
+        <div class="max-w-sm mx-auto">
+            <div class="relative overflow-hidden rounded-[3rem] shadow-2xl border-[12px] border-slate-900 bg-black aspect-[9/19]">
+                <div class="absolute inset-0">
+                    <img src="imgs/carr_1.jpg" alt="Captura 1" class="carousel-slide absolute inset-0 w-full h-full object-cover">
+                    <img src="imgs/carr_2.jpg" alt="Captura 2" class="carousel-slide absolute inset-0 w-full h-full object-cover opacity-0">
+                    <img src="imgs/carr_3.jpg" alt="Captura 3" class="carousel-slide absolute inset-0 w-full h-full object-cover opacity-0">
+                    <img src="imgs/carr_4.jpg" alt="Captura 4" class="carousel-slide absolute inset-0 w-full h-full object-cover opacity-0">
+                    <img src="imgs/carr_5.jpg" alt="Captura 5" class="carousel-slide absolute inset-0 w-full h-full object-cover opacity-0">
                 </div>
                 
-                <!-- Controles -->
-                <button class="carousel-btn prev absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-blue-900 p-3 rounded-full shadow-lg transition z-10">
+                <button onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-md text-white p-2 rounded-full z-20 hover:bg-white/40">
                     <i data-lucide="chevron-left"></i>
                 </button>
-                <button class="carousel-btn next absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-blue-900 p-3 rounded-full shadow-lg transition z-10">
+                <button onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-md text-white p-2 rounded-full z-20 hover:bg-white/40">
                     <i data-lucide="chevron-right"></i>
                 </button>
-                
-                <!-- Indicadores -->
-                <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-10">
-                    <button class="carousel-indicator w-3 h-3 rounded-full bg-white shadow-md transition" data-slide="0"></button>
-                    <button class="carousel-indicator w-3 h-3 rounded-full bg-white/50 shadow-md transition" data-slide="1"></button>
-                    <button class="carousel-indicator w-3 h-3 rounded-full bg-white/50 shadow-md transition" data-slide="2"></button>
-                    <button class="carousel-indicator w-3 h-3 rounded-full bg-white/50 shadow-md transition" data-slide="3"></button>
-                    <button class="carousel-indicator w-3 h-3 rounded-full bg-white/50 shadow-md transition" data-slide="4"></button>
+
+                <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+                    <div class="indicator w-2 h-2 rounded-full bg-white transition-all"></div>
+                    <div class="indicator w-2 h-2 rounded-full bg-white/30 transition-all"></div>
+                    <div class="indicator w-2 h-2 rounded-full bg-white/30 transition-all"></div>
+                    <div class="indicator w-2 h-2 rounded-full bg-white/30 transition-all"></div>
+                    <div class="indicator w-2 h-2 rounded-full bg-white/30 transition-all"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- METODO SECTION -->
-    <section id="metodo" class="py-24 px-6 bg-white">
+    <!-- SECCIÓN: DESCARGAR -->
+    <section id="descargar" class="gradient-blue text-white py-24 px-6">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl font-black text-slate-900 mb-16 uppercase tracking-widest">Los 3 pilares del Maquinista</h2>
-            <div class="grid md:grid-cols-3 gap-16">
-                <div class="flex flex-col items-center">
-                    <div class="w-20 h-20 bg-red-100 text-red-600 rounded-3xl flex items-center justify-center mb-6 shadow-sm">
-                        <i data-lucide="hand" size="32"></i>
+            <h2 class="text-5xl font-black mb-8">Empieza hoy el viaje</h2>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                <div class="bg-slate-900 text-white px-8 py-4 rounded-2xl flex items-center gap-4 hover:bg-black transition-all cursor-pointer shadow-2xl hover:scale-105 border border-white/10">
+                    <i data-lucide="play" class="fill-white" size="32"></i>
+                    <div class="text-left">
+                        <p class="text-[10px] uppercase font-bold text-slate-400">Descargar en</p>
+                        <p class="text-xl font-bold">Google Play</p>
                     </div>
-                    <h3 class="font-bold text-xl mb-3 text-slate-800">Tacto (Lija)</h3>
-                    <p class="text-slate-500 leading-relaxed">Sentir la forma de las letras antes de leerlas graba el aprendizaje en la memoria táctil para siempre.</p>
                 </div>
-                <div class="flex flex-col items-center">
-                    <div class="w-20 h-20 bg-blue-100 text-blue-600 rounded-3xl flex items-center justify-center mb-6 shadow-sm">
-                        <i data-lucide="zap" size="32"></i>
+                <div class="bg-slate-900 text-white px-8 py-4 rounded-2xl flex items-center gap-4 hover:bg-black transition-all cursor-pointer shadow-2xl hover:scale-105 border border-white/10">
+                    <i data-lucide="apple" size="32"></i>
+                    <div class="text-left">
+                        <p class="text-[10px] uppercase font-bold text-slate-400">Pronto en</p>
+                        <p class="text-xl font-bold">App Store</p>
                     </div>
-                    <h3 class="font-bold text-xl mb-3 text-slate-800">El Choque</h3>
-                    <p class="text-slate-500 leading-relaxed">Las locomotoras rojas chocan con los vagones azules para unir sonidos de forma fluida y sin cortes.</p>
-                </div>
-                <div class="flex flex-col items-center">
-                    <div class="w-20 h-20 bg-green-100 text-green-600 rounded-3xl flex items-center justify-center mb-6 shadow-sm">
-                        <i data-lucide="eraser" size="32"></i>
-                    </div>
-                    <h3 class="font-bold text-xl mb-3 text-slate-800">La Sal</h3>
-                    <p class="text-slate-500 leading-relaxed">Un espacio de juego seguro donde borrar errores al instante quita el miedo al fallo y fomenta el intento.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PRIVACY POLICY -->
-    <section id="privacidad" class="py-24 px-6 bg-slate-100">
-        <div class="max-w-3xl mx-auto bg-white p-12 rounded-[50px] shadow-xl border border-slate-200">
-            <h2 class="text-2xl font-black text-slate-800 mb-8 flex items-center gap-3">
-                <i data-lucide="shield-check" class="text-green-600" size="28"></i> Política de Privacidad
-            </h2>
-            <div class="text-slate-600 space-y-5 text-sm leading-relaxed">
-                <p>En <strong>KoLoKids</strong>, la privacidad de tus hijos es nuestra prioridad absoluta. Esta Política describe cómo nuestra aplicación "El Maquinista" trata la información.</p>
-                
-                <h4 class="font-bold text-slate-800 uppercase text-xs tracking-wider">1. Recopilación de datos</h4>
-                <p>La aplicación "El Maquinista" <strong>NO recopila ningún dato personal</strong> del usuario. No solicitamos nombres, correos electrónicos ni información de contacto.</p>
-                
-                <h4 class="font-bold text-slate-800 uppercase text-xs tracking-wider">2. Almacenamiento Local</h4>
-                <p>El progreso del niño (día actual y racha) se guarda exclusivamente de forma local en el dispositivo. KoLoKids no tiene acceso a esta información ni la comparte con terceros.</p>
-                
-                <h4 class="font-bold text-slate-800 uppercase text-xs tracking-wider">3. Publicidad y Compras</h4>
-                <p>Nuestra aplicación no contiene anuncios de terceros ni compras integradas para garantizar un entorno seguro y libre de distracciones para niños con TEA.</p>
-                
-                <h4 class="font-bold text-slate-800 uppercase text-xs tracking-wider">4. Contacto</h4>
-                <p>Para cualquier duda sobre esta política, puedes contactarnos en: <strong class="text-blue-600">hola@kolokids.org</strong></p>
-                
-                <p class="pt-6 border-t border-slate-100 text-slate-400 italic">Última actualización: Marzo 2026</p>
+    <!-- PRIVACY POLICY SECTION (ROBUSTA PARA GOOGLE) -->
+    <section id="privacidad" class="py-24 px-6 bg-slate-50">
+        <div class="max-w-4xl mx-auto bg-white p-12 rounded-[50px] shadow-sm border border-slate-200">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="bg-blue-100 p-3 rounded-2xl text-blue-600">
+                    <i data-lucide="shield-check" size="32"></i>
+                </div>
+                <h2 class="text-3xl font-black text-slate-800 tracking-tight">Política de Privacidad</h2>
+            </div>
+            
+            <div class="text-slate-600 space-y-6 text-sm leading-relaxed">
+                <p>En <strong>KoLoKids</strong> (en adelante, "nosotros"), nos tomamos muy en serio la seguridad de los niños. Esta Política de Privacidad describe cómo la aplicación móvil <strong>"El Maquinista"</strong> trata la información.</p>
+
+                <div>
+                    <h3 class="font-bold text-slate-800 uppercase text-xs tracking-wider mb-2">1. Aplicación Dirigida a Niños</h3>
+                    <p>Nuestra aplicación está diseñada específicamente para niños. Cumplimos estrictamente con la Ley de Protección de la Privacidad Infantil en Línea (<strong>COPPA</strong>) y el <strong>RGPD-K</strong>. No solicitamos ni recopilamos datos personales de menores.</p>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-slate-800 uppercase text-xs tracking-wider mb-2">2. Recopilación de Información</h3>
+                    <p><strong>Cero Recopilación de Datos Personales:</strong> No recopilamos nombres, correos electrónicos, números de teléfono, ubicación GPS, ni ningún identificador personal del usuario.</p>
+                    <p><strong>Sin Identificadores de Publicidad:</strong> No utilizamos ID de publicidad (AAID) ni realizamos seguimiento del comportamiento del usuario para fines comerciales.</p>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-slate-800 uppercase text-xs tracking-wider mb-2">3. Almacenamiento Local de Progreso</h3>
+                    <p>Todo el progreso del niño (días completados, racha, nivel del tren) se almacena <strong>exclusivamente de forma local</strong> en el dispositivo del usuario. Esta información no se envía a servidores externos ni se comparte con terceros.</p>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-slate-800 uppercase text-xs tracking-wider mb-2">4. Publicidad y Compras</h3>
+                    <p>Para garantizar un entorno seguro y libre de distracciones para niños con TEA, la aplicación <strong>no contiene anuncios de terceros</strong> ni ofrece compras dentro de la aplicación (In-App Purchases).</p>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-slate-800 uppercase text-xs tracking-wider mb-2">5. Contacto</h3>
+                    <p>Si tiene cualquier duda sobre esta política, puede contactar con el responsable del tratamiento de datos en: <strong class="text-blue-600 underline">hola@kolokids.org</strong></p>
+                </div>
+
+                <p class="pt-6 border-t border-slate-100 text-slate-400 italic">Última revisión: Abril 2026</p>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="py-16 px-6 text-center text-slate-400 text-sm">
-        <p>© 2026 KoLoKids.org - Hecho con ❤️ para pequeños maquinistas de todo el mundo.</p>
+    <footer class="bg-slate-900 text-slate-400 py-12 px-6 text-center">
+        <p class="text-sm">© 2026 KoLoKids.org - Hecho con ❤️ para familias reales.</p>
     </footer>
 
     <script>
         lucide.createIcons();
 
-        // Carrusel de imágenes
         let currentSlide = 0;
         const slides = document.querySelectorAll('.carousel-slide');
-        const indicators = document.querySelectorAll('.carousel-indicator');
-        const totalSlides = slides.length;
+        const indicators = document.querySelectorAll('.indicator');
 
-        function showSlide(index) {
-            slides.forEach((slide, i) => {
-                slide.style.opacity = i === index ? '1' : '0';
-            });
-            indicators.forEach((indicator, i) => {
-                indicator.style.backgroundColor = i === index ? 'white' : 'rgba(255,255,255,0.5)';
-            });
+        function updateCarousel() {
+            slides.forEach((s, i) => s.style.opacity = i === currentSlide ? '1' : '0');
+            indicators.forEach((ind, i) => ind.classList.toggle('bg-white', i === currentSlide));
+            indicators.forEach((ind, i) => ind.classList.toggle('bg-white/30', i !== currentSlide));
         }
 
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            showSlide(currentSlide);
-        }
+        function nextSlide() { currentSlide = (currentSlide + 1) % slides.length; updateCarousel(); }
+        function prevSlide() { currentSlide = (currentSlide - 1 + slides.length) % slides.length; updateCarousel(); }
 
-        function prevSlide() {
-            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-            showSlide(currentSlide);
-        }
-
-        // Event listeners
-        document.querySelector('.carousel-btn.next').addEventListener('click', nextSlide);
-        document.querySelector('.carousel-btn.prev').addEventListener('click', prevSlide);
-        
-        indicators.forEach((indicator, index) => {
-            indicator.addEventListener('click', () => {
-                currentSlide = index;
-                showSlide(currentSlide);
-            });
-        });
-
-        // Auto-advance cada 6 segundos
-        setInterval(nextSlide, 6000);
+        setInterval(nextSlide, 5000);
     </script>
 
     <style>
-        @keyframes bounce-slight {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-        }
-        .animate-bounce-slight {
-            animation: bounce-slight infinite ease-in-out;
-        }
+        @keyframes bounce-slight { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+        .animate-bounce-slight { animation: bounce-slight infinite ease-in-out; }
     </style>
 </body>
 </html>
